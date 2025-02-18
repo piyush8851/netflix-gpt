@@ -1,8 +1,10 @@
-import './App.css'
+import { createBrowserRouter } from 'react-router-dom'
+import Body from './components/Body'
+import Browse from './components/Browse'
 
 function App() {
   return(
-    <div></div>
+    <Body />
   )
 }
 
