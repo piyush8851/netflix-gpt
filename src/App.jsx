@@ -1,10 +1,12 @@
-import { createBrowserRouter } from 'react-router-dom'
 import Body from './components/Body'
-import Browse from './components/Browse'
+import appStore from './utils/appStore'
+import {Provider} from "react-redux"
 
 function App() {
   return(
-    <Body />
+    <Provider store={appStore}>
+      <Body />
+    </Provider>
   )
 }
 
