@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from '../utils/firbase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { USER_AVTAR } from '../utils/constants';
 
 
 const Login = () => {
@@ -32,7 +33,7 @@ const Login = () => {
       .then((userCredential) => { 
         const user = userCredential.user;
         updateProfile(user, {
-          displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/154680315?v=4"
+          displayName: name.current.value, photoURL: USER_AVTAR
         }).then(() => {
           // Profile updated!
           const {uid, email, displayName, photoURL} = auth.currentUser;
@@ -40,6 +41,7 @@ const Login = () => {
         }).catch((error) => {
           // An error occurred
           // ...
+          
           setErrorMessage(error.message);
         });
         
