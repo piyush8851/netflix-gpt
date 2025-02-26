@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from '../utils/firbase';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-import { USER_AVTAR } from '../utils/constants';
+import { BG_URL, USER_AVTAR } from '../utils/constants';
 
 
 const Login = () => {
@@ -72,7 +72,7 @@ const Login = () => {
     <div>
         <Header />
         <div className='absolute'>
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/f268d374-734d-474f-ad13-af5ba87ef9fc/web/IN-en-20250210-TRIFECTA-perspective_92338d5d-6ccd-4b1a-8536-eb2b0240a55e_large.jpg" srcSet="https://assets.nflxext.com/ffe/siteui/vlv3/f268d374-734d-474f-ad13-af5ba87ef9fc/web/IN-en-20250210-TRIFECTA-perspective_92338d5d-6ccd-4b1a-8536-eb2b0240a55e_large.jpg 2000w, https://assets.nflxext.com/ffe/siteui/vlv3/f268d374-734d-474f-ad13-af5ba87ef9fc/web/IN-en-20250210-TRIFECTA-perspective_92338d5d-6ccd-4b1a-8536-eb2b0240a55e_medium.jpg 1279w, https://assets.nflxext.com/ffe/siteui/vlv3/f268d374-734d-474f-ad13-af5ba87ef9fc/web/IN-en-20250210-TRIFECTA-perspective_92338d5d-6ccd-4b1a-8536-eb2b0240a55e_small.jpg 959w" alt="" aria-hidden="true" class="default-ltr-cache-19j6xtr"></img>
+        <img src={BG_URL} alt="" aria-hidden="true" class="default-ltr-cache-19j6xtr"></img>
         </div>
         <form onSubmit={(e) => e.preventDefault()} className='w-3/12 my-36 mx-auto right-0 left-0 p-12 bg-black bg-opacity-50 absolute rounded-lg '>
             <h1 className='font-bold text-3xl text-white py-4'>{ isSignIn ? "Sign In" : "Sign Up"}</h1>
